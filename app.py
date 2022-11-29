@@ -9,7 +9,8 @@ from gradio.mix import Series
 def drawImage(text, font): #add another argument for prompt later
     out = Image.new("RGB", (512, 512), (0, 0, 0))
     #move font to font-directory 
-    print("test")
+    print("font:")
+    print(str(type(font)))
     #print (os.path.abspath(str(type(font))))
     srcPath = './app.py' + (str(type(font)))
     print(srcPath)

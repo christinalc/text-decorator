@@ -12,7 +12,7 @@ def drawImage(text, font): #add another argument for prompt later
     out = Image.new("RGB", (512, 512), (0, 0, 0))
     #move font to font-directory 
     #print(os.listdir())
-    print os.path.abspath(font)
+    print (os.path.abspath(font))
     #shutil.move(srcFolder+font,'font-directory')
     
     fnt = ImageFont.truetype(font, 40)

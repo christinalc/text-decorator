@@ -5,7 +5,8 @@ import gradio as gr
 from gradio.mix import Series
 
 #draw an input image based off of user's text input
-print("does this work" + os.listdir) 
+print("test")
+print(os.listdir) 
 
 def drawImage(text, font): #add another argument for prompt later
     out = Image.new("RGB", (512, 512), (0, 0, 0))

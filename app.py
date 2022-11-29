@@ -5,10 +5,10 @@ from gradio.mix import Series
 #draw an input image based off of user's text input
 
 def drawImage(text, font): #add another argument for prompt later
-  out = Image.new("RGB", (512, 512), (255, 255, 255))
+  out = Image.new("RGB", (512, 512), (0, 0, 0))
   #fnt = ImageFont.truetype(font, 40)
   d = ImageDraw.Draw(out)
-  d.multiline_text((10, 64), text, fill=(0, 0, 0))
+  d.multiline_text((10, 64), text, fill=(255, 255, 255))
   #d.multiline_text((10, 64), text, font=fnt, fill=(0, 0, 0))
   out.show()
   return out

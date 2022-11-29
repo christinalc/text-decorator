@@ -11,7 +11,7 @@ def drawImage(text, font): #add another argument for prompt later
     #move font to font-directory 
     print("test")
     #print (os.path.abspath(str(type(font))))
-    srcPath = '/home/user/app/' + (str(type(font)))
+    srcPath = './app.py' + (str(type(font)))
     print(srcPath)
     shutil.move(srcPath,'font-directory')
     

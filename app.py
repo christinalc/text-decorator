@@ -6,7 +6,7 @@ from gradio.mix import Series
 
 def drawImage(text, font): #add another argument for prompt
   out = Image.new("RGB", (512, 512), (255, 255, 255))
-  fnt = ImageFont.truetype(font, 40)
+  #fnt = ImageFont.truetype(font, 40)
   #console.log(fnt)
   d = ImageDraw.Draw(out)
   d.multiline_text((10, 64), text, fill=(0, 0, 0))

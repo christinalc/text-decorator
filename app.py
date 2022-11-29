@@ -19,7 +19,7 @@ demo = gr.Interface(
     fn=drawImage, 
     inputs=[
         gr.Textbox(placeholder="shift + enter for new line",label="what do you want to say?"),
-        gr.File(type="filepath")
+        "file"
         #gr.Textbox(placeholder="prompt",label="how does your message look and feel?") #figure out models in series 
         ],
     outputs="image")

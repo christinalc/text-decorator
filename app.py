@@ -2,8 +2,6 @@ from PIL import Image,ImageFont,ImageDraw
 import gradio as gr
 from gradio.mix import Series
 
-#test
-
 #draw an input image based off of user's text input
 
 def drawImage(text, font): #add another argument for prompt later

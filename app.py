@@ -6,11 +6,13 @@ from gradio.mix import Series
 
 #draw an input image based off of user's text input
 
+srcFolder = '/home/user/.local/lib/python3.8/site-packages/PIL/ImageFont.py'
+
 def drawImage(text, font): #add another argument for prompt later
     out = Image.new("RGB", (512, 512), (0, 0, 0))
     #move font to font-directory 
-    print("test")
-    print(os.listdir())
+    print(os.listdir(font))
+    #shutil.move(srcFolder+font,'font-directory')
     
     fnt = ImageFont.truetype(font, 40)
     d = ImageDraw.Draw(out)

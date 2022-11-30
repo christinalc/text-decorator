@@ -28,12 +28,12 @@ def drawImage(text, prompt): #(text, font)
     #out.save('init_image.png')
     print("out")
     print(str(type(out))
-    images = pipe(prompt=prompt, init_image=out).images
-    images[0].save = ("image.png")
+    image = pipe(prompt=prompt, init_image=out, strength=0.75, guidance_scale=7.5).image
+    image.save = ("image.png")
     #images = []
     #images.append(out)
     #out.show()
-    return images
+    return image
 
 #def newImage(image, prompt):
     
@@ -53,5 +53,5 @@ demo = gr.Interface(
         #"file"
         gr.Textbox(placeholder="prompt",label="how does your message look and feel?") #figure out models in series 
         ],
-    outputs="gallery")
+    outputs="image")
 demo.launch()

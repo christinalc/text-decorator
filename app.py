@@ -26,11 +26,11 @@ def drawImage(text, prompt): #(text, font, prompt)
     d.multiline_text((10, 64), text, font=fnt, fill=(255, 255, 255))
 
     #init_image = out
-    outImage = pipe(prompt=prompt, init_image=out, strength=0.75, guidance_scale=7.5).outImage
+    images = pipe(prompt=prompt, init_image=out, strength=0.75, guidance_scale=7.5).images
     #images = []
     #images.append(out_image)
     #out.show()
-    return outImage
+    return images
 
 demo = gr.Interface(
     #title="AI text decorator",

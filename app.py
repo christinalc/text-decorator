@@ -10,7 +10,7 @@ from gradio.mix import Series
 from diffusers import StableDiffusionImg2ImgPipeline
 
 YOUR_TOKEN=MY_SECRET_TOKEN
-device="cpu"
+device="cuda" if torch.cuda.is_available() else "cpu"
 pipe = StableDiffusionImg2ImgPipeline.from_pretrained("runwayml/stable-diffusion-v1-5", use_auth_token=YOUR_TOKEN)
 pipe.to(device)
 

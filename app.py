@@ -14,7 +14,7 @@ device="cpu"
 img_pipe = StableDiffusionImg2ImgPipeline.from_pretrained("runwayml/stable-diffusion-v1-5", use_auth_token=YOUR_TOKEN)
 img_pipe.to(device)
 
-#draw an input image based off of user's text input
+#draw an image based off of user's text input
 
 def drawImage(text, prompt): #(text, font, prompt)
     out = Image.new("RGB", (512, 512), (0, 0, 0))

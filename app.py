@@ -27,12 +27,13 @@ def drawImage(text, prompt): #(text, font)
     #init_image = out
     #out.save('init_image.png')
     print("out")
-    print(out)
-    images = pipe(prompt=prompt, init_image=out, strength=0.75, guidance_scale=7.5).images
+    print(str(type(out))
+    image = pipe(prompt=prompt, init_image=out).images[0]
+    image.save = ("image.png")
     #images = []
-    #images.append(out_image)
+    #images.append(out)
     #out.show()
-    return images
+    return image
 
 #def newImage(image, prompt):
     

@@ -27,7 +27,7 @@ def drawImage(text, prompt): #(text, font)
     #init_image = out
     out.save('initImage.png')
     images = []
-    images = pipe(prompt=prompt, init_image=out, strength=0.8, guidance_scale=7.8).images
+    images = pipe(prompt=prompt, init_image=out, strength=0.9, guidance_scale=7.5).images
     #images[0].save = ("image.png")
     #images = []
     #images.append(out)

@@ -11,8 +11,8 @@ from diffusers import StableDiffusionImg2ImgPipeline
 
 YOUR_TOKEN=MY_SECRET_TOKEN
 device="cpu"
-img_pipe = StableDiffusionImg2ImgPipeline.from_pretrained("runwayml/stable-diffusion-v1-5", use_auth_token=YOUR_TOKEN)
-img_pipe.to(device)
+pipe = StableDiffusionImg2ImgPipeline.from_pretrained("runwayml/stable-diffusion-v1-5", use_auth_token=YOUR_TOKEN)
+pipe.to(device)
 
 #draw an image based off of user's text input
 

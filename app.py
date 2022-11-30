@@ -17,17 +17,17 @@ pipe.to(device)
 #draw an image based off of user's text input
 
 def drawImage(text, prompt): #(text, font)
-    out = Image.new("RGB", (512, 512), (0, 0, 0))
+    out = Image.new("RGB", (512, 512), (255, 255, 255))
     #add some code here to move font to font-directory   
     font = './font-directory/DimpleSans-Regular.otf'
     fnt = ImageFont.truetype(font, 160)
     d = ImageDraw.Draw(out)
-    d.multiline_text((10, 64), text, font=fnt, fill=(255, 255, 255))
+    d.multiline_text((16, 64), text, font=fnt, fill=(0, 0, 0))
 
     #init_image = out
     out.save('initImage.png')
     images = []
-    images = pipe(prompt=prompt, init_image=out, strength=0.75, guidance_scale=7.5).images
+    images = pipe(prompt=prompt, init_image=out, strength=0.8, guidance_scale=78).images
     #images[0].save = ("image.png")
     #images = []
     #images.append(out)

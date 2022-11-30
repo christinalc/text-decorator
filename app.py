@@ -25,14 +25,16 @@ def drawImage(text, prompt): #(text, font, prompt)
     d = ImageDraw.Draw(out)
     d.multiline_text((10, 64), text, font=fnt, fill=(255, 255, 255))
 
-    init_image = out
-    out_image = pipe(prompt=prompt, init_image=init_image, strength=0.75, guidance_scale=7.5)
+    #init_image = out
+    outImage = pipe(prompt=prompt, init_image=out, strength=0.75, guidance_scale=7.5).outImage
+    #images = []
+    #images.append(out_image)
     #out.show()
-    return out_image
+    return outImage
 
 demo = gr.Interface(
-    title="AI text decorator",
-    description="christina",
+    #title="AI text decorator",
+    #description="christina",
     fn=drawImage, 
     inputs=[
         gr.Textbox(placeholder="shift + enter for new line",label="what do you want to say?"),

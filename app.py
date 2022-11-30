@@ -10,7 +10,7 @@ def drawImage(text): #add another argument for prompt later
     out = Image.new("RGB", (512, 512), (0, 0, 0))
     #move font to font-directory 
     font = './font-directory/DimpleSans-Regular.otf'
-    fnt = ImageFont.truetype(font, 40)
+    fnt = ImageFont.truetype(font, 80)
     d = ImageDraw.Draw(out)
     #d.multiline_text((10, 64), text, fill=(255, 255, 255))
     d.multiline_text((10, 64), text, font=fnt, fill=(255, 255, 255))

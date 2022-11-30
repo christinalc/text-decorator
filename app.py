@@ -16,11 +16,11 @@ pipe.to(device)
 
 #draw an image based off of user's text input
 
-def drawImage(text, textsize, prompt, strength, guidance_scale): #(text, font)
+def drawImage(text, prompt, strength, guidance_scale): #(text, text_size, font)
     out = Image.new("RGB", (512, 512), (0, 0, 0))
     #add some code here to move font to font-directory   
     font = './font-directory/DimpleSans-Regular.otf'
-    fnt = ImageFont.truetype(font, textsize)
+    fnt = ImageFont.truetype(font, 240)
     d = ImageDraw.Draw(out)
     d.multiline_text((16, 64), text, font=fnt, fill=(255, 255, 255))
 
@@ -50,7 +50,7 @@ demo = gr.Interface(
     inputs=[
         gr.Textbox(placeholder="shift + enter for new line",label="what do you want to say?"),
         #"file"
-        gr.Number(value=int(240)),
+        #gr.Number(value=int(240)),
         gr.Textbox(placeholder="enter prompt",label="how does your message look and feel?"), #figure out models in series 
         gr.Slider(label="strength", placeholder="controls the amount of noise that is added to the input image",minimum=0, maximum=1, step=0.01, value=0.7),
         gr.Slider(label="guidance scale", placeholder="controls how much the image generation process follows the text prompt",value=7.5, maximum=20),

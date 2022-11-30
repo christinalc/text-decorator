@@ -1,0 +1,4 @@
+torch
+transformers
+ftfy
+git+https://github.com/huggingface/diffusers

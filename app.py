@@ -25,11 +25,10 @@ def drawImage(text, prompt): #(text, font)
     d.multiline_text((10, 64), text, font=fnt, fill=(255, 255, 255))
 
     #init_image = out
-    #out.save('init_image.png')
-    print("out")
-    #print(str(type(out))
+    out.save('initImage.png')
+    images = []
     images = pipe(prompt=prompt, init_image=out, strength=0.75, guidance_scale=7.5).images
-    images[0].save = ("image.png")
+    #images[0].save = ("image.png")
     #images = []
     #images.append(out)
     #out.show()

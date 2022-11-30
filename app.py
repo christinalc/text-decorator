@@ -16,22 +16,32 @@ pipe.to(device)
 
 #draw an image based off of user's text input
 
-def drawImage(text, prompt): #(text, font, prompt)
+def drawImage(text, prompt): #(text, font)
     out = Image.new("RGB", (512, 512), (0, 0, 0))
-    #add some code here to move font to font-directory 
-    
+    #add some code here to move font to font-directory   
     font = './font-directory/DimpleSans-Regular.otf'
     fnt = ImageFont.truetype(font, 160)
     d = ImageDraw.Draw(out)
     d.multiline_text((10, 64), text, font=fnt, fill=(255, 255, 255))
 
     #init_image = out
-    out.save('init_image.png')
+    #out.save('init_image.png')
+    print("out")
+    print(out)
     images = pipe(prompt=prompt, init_image=out, strength=0.75, guidance_scale=7.5).images
     #images = []
     #images.append(out_image)
     #out.show()
     return images
+
+#def newImage(image, prompt):
+    
+    #return images
+
+#drawImage = gr.Interface(fn=drawImage, inputs=gr.Textbox(placeholder="shift + enter for new line",label="what do you want to say?"),outputs="image")
+#newImage = gr.Interface(fn=newImage,inputs=[gr.Textbox(placeholder="prompt",label="how does your message look and feel?")],outputs="image")
+
+#demo = gr.Series(drawImage,newImage)
 
 demo = gr.Interface(
     #title="AI text decorator",

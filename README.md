@@ -1,7 +1,7 @@
 ---
 title: Text Decorator
-emoji: 🏃
-colorFrom: gray
+emoji: ✍🏻
+colorFrom: pink
 colorTo: yellow
 sdk: gradio
 sdk_version: 3.11.0

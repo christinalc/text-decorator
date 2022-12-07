@@ -3,4 +3,4 @@ torch
 transformers
 ftfy
 accelerate
-git+https://github.com/huggingface/diffusers.git
+git+https://github.com/huggingface/diffusers

@@ -47,7 +47,7 @@ def drawImage(text, text_size, prompt, strength, guidance_scale): #(text, text_s
 
 demo = gr.Interface(
     title="Try out the tool I built for AI Alphabet",
-    description="Save or screenshot your creations and share on https://forms.gle/qhzc7nfX7VGwBco96 ⚡️ Note: I've upgraded the hardware today from 7-9pm so that it runs faster, if you visit this link in the future, it will be slower.",
+    description="Save or screenshot your creations and share on https://forms.gle/qhzc7nfX7VGwBco96 ⚡️ (Note: I've upgraded the hardware today from 7-9pm so that it runs faster, if you visit this link in the future, it will be slower.)",
     ##theme='huggingface',
     #css="""
     #body {font-family: system-ui, Helvetica, Arial, sans-serif}

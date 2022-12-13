@@ -66,10 +66,6 @@ blocks = gr.Blocks()
 with blocks (css=".gradio-container {background-color: red}") as demo:
     title="this will be very slow since it's on CPU! msg me if you would like to try",
     description="turn on acceleration from7-9,google form",
-    ##theme='huggingface',
-    css="""
-    body {font-family: system-ui, Helvetica, Arial, sans-serif}
-    """,
     fn=drawImage, 
     inputs=[
         gr.Textbox(placeholder="shift + enter for new line",label="what do you want to say?"),

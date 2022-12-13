@@ -43,15 +43,29 @@ def drawImage(text, text_size, prompt, strength, guidance_scale): #(text, text_s
 
 #demo = gr.Series(drawImage,newImage)
 
-blocks = gr.Blocks()
+#blocks = gr.Blocks()
 
-#demo = gr.Interface(
-    #title="this will be very slow since it's on CPU! msg me if you would like to try",
-    #description="turn on acceleration from7-9,google form",
+demo = gr.Interface(
+    title="this will be very slow since it's on CPU! msg me if you would like to try",
+    description="turn on acceleration from7-9, https://forms.gle/qhzc7nfX7VGwBco96",
     ##theme='huggingface',
     #css="""
     #body {font-family: system-ui, Helvetica, Arial, sans-serif}
     #""",
+    fn=drawImage, 
+    inputs=[
+        #gr.Textbox(placeholder="shift + enter for new line",label="what do you want to say?"),
+        ##"file"
+        #gr.Number(label="text size",value=240),
+        #gr.Textbox(placeholder="eg. imagery, art style, materials, emotions",label="how does your message look and feel?"), #figure out models in series 
+        #gr.Slider(label="strength (how much noise will be added to the input image)",minimum=0, maximum=1, step=0.01, value=0.7),
+        #gr.Slider(label="guidance scale (how much the image generation follows the prompt)",value=15, maximum=20),
+        #],
+    outputs="image")
+
+#with blocks (css=".gradio-container {background-color: red}") as demo:
+    #title="this will be very slow since it's on CPU! msg me if you would like to try",
+    #description="turn on acceleration from7-9,google form",
     #fn=drawImage, 
     #inputs=[
         #gr.Textbox(placeholder="shift + enter for new line",label="what do you want to say?"),
@@ -61,20 +75,6 @@ blocks = gr.Blocks()
         #gr.Slider(label="strength (how much noise will be added to the input image)",minimum=0, maximum=1, step=0.01, value=0.7),
         #gr.Slider(label="guidance scale (how much the image generation follows the prompt)",value=15, maximum=20),
         #],
-    #outputs="image")
-
-with blocks (css=".gradio-container {background-color: red}") as demo:
-    title="this will be very slow since it's on CPU! msg me if you would like to try",
-    description="turn on acceleration from7-9,google form",
-    fn=drawImage, 
-    inputs=[
-        gr.Textbox(placeholder="shift + enter for new line",label="what do you want to say?"),
-        ##"file"
-        gr.Number(label="text size",value=240),
-        gr.Textbox(placeholder="eg. imagery, art style, materials, emotions",label="how does your message look and feel?"), #figure out models in series 
-        gr.Slider(label="strength (how much noise will be added to the input image)",minimum=0, maximum=1, step=0.01, value=0.7),
-        gr.Slider(label="guidance scale (how much the image generation follows the prompt)",value=15, maximum=20),
-        ],
-    outputs="image"
+    #outputs="image"
     
 demo.launch()

@@ -46,8 +46,8 @@ def drawImage(text, text_size, prompt, strength, guidance_scale): #(text, text_s
 #blocks = gr.Blocks()
 
 demo = gr.Interface(
-    title="Save or screenshot your creations and share on https://forms.gle/qhzc7nfX7VGwBco96",
-    description="Text Decorator is the tool I built to create AI Alphabet - I've upgraded the hardware today from 7-9pm so that it runs faster, if you visit this link in the future, it will be slower.",
+    title="Try out the tool I built for AI Alphabet",
+    description="Save or screenshot your creations and share on https://forms.gle/qhzc7nfX7VGwBco96 ⚡️ Note: I've upgraded the hardware today from 7-9pm so that it runs faster, if you visit this link in the future, it will be slower.",
     ##theme='huggingface',
     #css="""
     #body {font-family: system-ui, Helvetica, Arial, sans-serif}

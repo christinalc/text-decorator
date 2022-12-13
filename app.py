@@ -46,6 +46,7 @@ def drawImage(text, text_size, prompt, strength, guidance_scale): #(text, text_s
 demo = gr.Interface(
     title="this will be very slow since it's on CPU! msg me if you would like to try",
     #description="christina",
+    theme='huggingface',
     fn=drawImage, 
     inputs=[
         gr.Textbox(placeholder="shift + enter for new line",label="what do you want to say?"),

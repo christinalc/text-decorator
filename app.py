@@ -49,7 +49,7 @@ demo = gr.Interface(
     #theme='huggingface',
     css="""
     body {system-ui, Helvetica, Arial, sans-serif}
-    """
+    """,
     fn=drawImage, 
     inputs=[
         gr.Textbox(placeholder="shift + enter for new line",label="what do you want to say?"),

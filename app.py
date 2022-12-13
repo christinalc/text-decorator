@@ -54,13 +54,13 @@ demo = gr.Interface(
     #""",
     fn=drawImage, 
     inputs=[
-        #gr.Textbox(placeholder="shift + enter for new line",label="what do you want to say?"),
+        gr.Textbox(placeholder="shift + enter for new line",label="what do you want to say?"),
         ##"file"
-        #gr.Number(label="text size",value=240),
-        #gr.Textbox(placeholder="eg. imagery, art style, materials, emotions",label="how does your message look and feel?"), #figure out models in series 
-        #gr.Slider(label="strength (how much noise will be added to the input image)",minimum=0, maximum=1, step=0.01, value=0.7),
-        #gr.Slider(label="guidance scale (how much the image generation follows the prompt)",value=15, maximum=20),
-        #],
+        gr.Number(label="text size",value=240),
+        gr.Textbox(placeholder="eg. imagery, art style, materials, emotions",label="how does your message look and feel?"), #figure out models in series 
+        gr.Slider(label="strength (how much noise will be added to the input image)",minimum=0, maximum=1, step=0.01, value=0.7),
+        gr.Slider(label="guidance scale (how much the image generation follows the prompt)",value=15, maximum=20),
+        ],
     outputs="image")
 
 #with blocks (css=".gradio-container {background-color: red}") as demo:
